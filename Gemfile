@@ -90,6 +90,8 @@ group :development do
   gem 'rvm1-capistrano3', require: false
   gem 'capistrano3-puma'
 
+  gem 'bootstrap'
+
   gem 'figaro'
   gem 'twilio-ruby'
   gem 'ibm_watson'

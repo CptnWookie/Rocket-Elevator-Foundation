@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     confirmation: 'v'
   }
 
+  get 'interventions/index'
   get 'my_quotes' => 'quotes#user_quotes', as: :my_quotes
   get 'my_leads' => 'leads#user_leads', as: :my_leads
 
