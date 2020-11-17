@@ -1,114 +1,132 @@
 <section id="interventions">
-    <div class="container">
 
+    <div class="container">
         <div class="heading-title heading-dotted text-center" style="font-size: 30px;">
             <h2>Interventions</h2>
         </div>
-
-        <div class="row justify-content-center text-center">  
-            <form name="customers">                                                                                   
-                
-                <label class="col">Select Customer</label>
-                <select class="col justify-content-center text-center w-300" name="customerList" id="customerList" onchange="showHide()">
-                    <option value="select">Select</option>
-                    <option value="customer">CustomerList</option>
-                </select>
-                
-            </form> 
-        </div>  
-
-        <div class="row justify-content-center text-center">  
-            <form name="buildings">                                                                                   
-                
-                <label class="col">Select Building</label>
-                <select class="col justify-content-center text-center w-300" name="buildingList" id="buildingList" onchange="showHide()">
-                    <option value="select">Select</option>
-                    <option value="building">BuildingList</option>
-                </select>
-                
-            </form> 
-        </div>  
-
-        <div class="row justify-content-center text-center">  
-            <form name="batteries">                                                                                   
-                
-                <label class="col">Select Battery</label>
-                <select class="col justify-content-center text-center w-300" name="batteryList" id="batteryList" onchange="showHide()">
-                    <option value="select">Select</option>
-                    <option value="battery">BatteryList</option>
-                </select>
-                
-            </form> 
-        </div>  
-
-        <div class="row justify-content-center text-center">  
-            <form name="columns">                                                                                   
-                
-                <label class="col">Select Column</label>
-                <select class="col justify-content-center text-center w-300" name="columnsList" id="columnsList" onchange="showHide()">
-                    <option value="none">None</option>
-                    <option value="column">ColumnList</option>
-                </select>
-                
-            </form> 
-        </div>  
-
-        <div class="row justify-content-center text-center">  
-            <form name="elevators">                                                                                   
-                
-                <label class="col">Select Elevator</label>
-                <select class="col justify-content-center text-center w-300" name="buildingList" id="buildingList" onchange="showHide()">
-                    <option value="none">None</option>
-                    <option value="elevator">ElevatorList</option>
-                </select>
-                
-            </form> 
-        </div>  
-
-        <div class="row justify-content-center text-center">  
-            <form name="employees">                                                                                   
-                
-                <label class="col">Select Employee</label>
-                <select class="col justify-content-center text-center w-300" name="elevatorList" id="buildingList" onchange="showHide()">
-                    <option value="none">None</option>
-                    <option value="employee">EmployeeList</option>
-                </select>
-                
-            </form> 
-        </div>  
-        
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="text-center"
-
-
-<select class="form-control text-center" id="customerList">
-    <option value="select">Select Customer</option>
-    <option value="1">Business use</option>
-    <option value="2">Passing on to a client</option>
-</select>
-    <div style='display:none;' id='business'>Business Name<br/>&nbsp;
-        
     </div>
+
+    <div class="row justify-content-center text-center" id="customer">  
+        <form><label class="col">Select Customer</label>
+            <%= select_tag("customers", option_from)
+        </form> 
+    </div>  
+
+    <div class="row justify-content-center text-center" id="building">  
+        <form><label class="col">Select Building</label>
+            <select class="col justify-content-center text-center w-300" id="buildingSelect" onchange="showHide()" required>
+                <option value="select"> select </option>
+                <option value="test"> test </option>
+            </select>
+        </form> 
+    </div>  
+
+    <div class="row justify-content-center text-center" id="battery">  
+        <form><label class="col">Select Battery</label>
+            <select class="col justify-content-center text-center w-300" id="batterySelect" onchange="showHide()" required>
+                <option value="select"> select </option>
+                <option value="test"> test </option>
+            </select>
+        </form> 
+    </div>  
+
+    <div class="row justify-content-center text-center" id="column">  
+        <form><label class="col">Select Column</label>
+            <select class="col justify-content-center text-center w-300" id="columnSelect" onchange="showHide()" required>
+                <option value="select"> select </option>
+                <option value="test"> test </option>
+            </select>
+        </form> 
+    </div>  
+
+    <div class="row justify-content-center text-center" id="elevator">  
+        <form><label class="col">Select Elevator</label>
+            <select class="col justify-content-center text-center w-300" id="elevatorSelect" onchange="showHide()" required>
+                <option value="select"> select </option>
+                <option value="test"> test </option>
+            </select>
+        </form> 
+    </div>  
+
+    <div class="row justify-content-center text-center" id="employee">  
+        <form><label class="col">Select Employee</label>
+            <select class="col justify-content-center text-center w-300" id="employeeSelect" onchange="showHide()" required>
+                <option value="select"> select </option>
+                <option value="test"> test </option>
+            </select>
+        </form> 
+    </div> 
+
 </section>
 
 
+<script> 
 
+$(document).ready(function(){
+    $("#customer").show();
+    $("#building").hide();
+    $("#battery").hide();
+    $("#column").hide();
+    $("#elevator").hide();
+    $("#employee").show();
 
+    $('#customerSelect').on('change', function() {
+      if ( this.value == 'select')
+      {
+        $('#building').hide();
+        $('#battery').hide();
+        $('#column').hide();
+        $('#elevator').hide();
+      }
+      else
+      {
+        $('#buildingSelect').val('select');
+        $('#building').show();
+      }
+    });
 
-<script>
+    $('#buildingSelect').on('change', function() {
+      if ( this.value == 'select')
+      {
+        $('#battery').hide();
+        $('#column').hide();
+        $('#elevator').hide();
+      }
+      else
+      {
+        $('#batterySelect').val('select');
+        $('#battery').show();
+      }
+    });
 
+    $('#batterySelect').on('change', function() {
+      if ( this.value == 'select')
+      {
+        $('#column').hide();
+        $('#elevator').hide();
+      }
+      else
+      {
+        $('#columnSelect').val('select');
+        $('#column').show();
+      }
+    });
 
+    $('#columnSelect').on('change', function() {
+      if ( this.value == 'select')
+      {
+        $('#elevator').hide();
+      }
+      else
+      {
+        $('#elevatorSelect').val('select');
+        $('#elevator').show();
+      }
+    });    
+
+});
 </script>
+
+def full_name
+    first_name + '' + last_name
+end
