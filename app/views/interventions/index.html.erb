@@ -8,15 +8,22 @@
 
     <div class="row justify-content-center text-center" id="customer">  
         <form><label class="col">Select Customer</label>
-            <%= select_tag("customers", option_from)
-        </form> 
+            <select class="col justify-content-center text-center w-300" id="customerSelect" onchange="showHide()" required>
+                <option value="select"> select </option>
+                <% Customer.all.each do |customer| %> 
+                    <option value="customer.id"> <%= customer.company_contact_full_name %> </option>
+                <% end %>
+            </select>
+        </form>
     </div>  
 
     <div class="row justify-content-center text-center" id="building">  
         <form><label class="col">Select Building</label>
-            <select class="col justify-content-center text-center w-300" id="buildingSelect" onchange="showHide()" required>
-                <option value="select"> select </option>
-                <option value="test"> test </option>
+            <select class="col justify-content-center text-center w-300" id="buildingSelect" onchange="showHide()">
+                <option value="select">Select</option>
+                <% Building.all.each do |building| %> 
+                    <option value="building.id"> <%= building.address.number_and_street + ", " +building.address.city %> </option>
+                <% end %>
             </select>
         </form> 
     </div>  
@@ -25,7 +32,9 @@
         <form><label class="col">Select Battery</label>
             <select class="col justify-content-center text-center w-300" id="batterySelect" onchange="showHide()" required>
                 <option value="select"> select </option>
-                <option value="test"> test </option>
+                <% Battery.all.each do |battery| %> 
+                    <option value="battery.id"> <%= battery.id %> </option>
+                <% end %>
             </select>
         </form> 
     </div>  
@@ -34,7 +43,9 @@
         <form><label class="col">Select Column</label>
             <select class="col justify-content-center text-center w-300" id="columnSelect" onchange="showHide()" required>
                 <option value="select"> select </option>
-                <option value="test"> test </option>
+                <% Column.all.each do |column| %> 
+                    <option value="column.id"> <%= column.id %> </option>
+                <% end %>
             </select>
         </form> 
     </div>  
@@ -43,7 +54,9 @@
         <form><label class="col">Select Elevator</label>
             <select class="col justify-content-center text-center w-300" id="elevatorSelect" onchange="showHide()" required>
                 <option value="select"> select </option>
-                <option value="test"> test </option>
+                <% Elevator.all.each do |elevator| %> 
+                    <option value="elevator.id"> <%= elevator.id %> </option>
+                <% end %>
             </select>
         </form> 
     </div>  
@@ -52,7 +65,9 @@
         <form><label class="col">Select Employee</label>
             <select class="col justify-content-center text-center w-300" id="employeeSelect" onchange="showHide()" required>
                 <option value="select"> select </option>
-                <option value="test"> test </option>
+                <% Employee.all.each do |employee| %> 
+                    <option value="employee.id"> <%= employee.first_name + " " + employee.last_name %> </option>
+                <% end %>
             </select>
         </form> 
     </div> 
@@ -126,7 +141,3 @@ $(document).ready(function(){
 
 });
 </script>
-
-def full_name
-    first_name + '' + last_name
-end
