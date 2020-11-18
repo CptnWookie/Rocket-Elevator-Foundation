@@ -1,3 +1,3 @@
 class InterventionsController < ApplicationController
-           
+        
 end
