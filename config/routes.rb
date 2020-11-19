@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   }
 
   get 'interventions/index'
+  resources :interventions
+
   get 'my_quotes' => 'quotes#user_quotes', as: :my_quotes
   get 'my_leads' => 'leads#user_leads', as: :my_leads
 
