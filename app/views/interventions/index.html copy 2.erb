@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="heading-title heading-dotted text-center" style="font-size: 30px;">
+        <h2>Interventions</h2>
+    </div>
+</div>
+
+  <%= form_for Intervention.new do |f| %>
+
+    <div class="col justify-content-center text-center">
+        <%= f.label :Customer %>
+        <%= f.collection_select :customer_id, Customer.order(:company_name), :id, :company_name, prompt: 'Select Customer' %>
+      </div>
+      
+      <div class="col justify-content-center text-center">
+        <%= f.label :Building %>
+        <%= f.grouped_collection_select :building_id, Customer.order(:company_name), :buildings, :company_name, :customer_id, :id, prompt: 'Select Building' %>
+      </div>
+
+      <div class="col justify-content-center text-center">
+        <%= f.label :Battery %>
+        <%= f.grouped_collection_select :battery_id, Building.order(:id), :batteries, :id, :building_id, :id, include_blank: 'Select Battery' %>
+      </div>
+
+      <div class="col justify-content-center text-center">
+        <%= f.label :Column %>
+        <%= f.grouped_collection_select :column_id, Battery.order(:id), :columns, :id, :battery_id, :id, include_blank: 'Select Column' %>
+      </div>
+
+      <div class="col justify-content-center text-center">
+        <%= f.label :Elevator %>
+        <%= f.grouped_collection_select :elevator_id, Column.order(:id), :elevators, :id, :column_id, :id, include_blank: 'Select Elevator' %>
+      </div>
+
+      <div class="col justify-content-center text-center">
+        <%= f.label :Employee %>
+        <%= f.collection_select :employee_id, Employee.order(:first_name), :first_name, :last_name, include_blank: 'Select Employee' %>
+      </div>
+
+      <div class="form-actions text-center">
+        <%= f.submit %>
+      </div>
+
+  <% end %>
