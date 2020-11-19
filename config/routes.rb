@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-
-
+  
+  
   get 'geolocation/index'
- 
-
+  
+  
   mount RailsAdmin::Engine => '/backoffice', as: 'rails_admin'
+  
+  get 'interventions/index'
   
 
 
@@ -26,7 +28,8 @@ Rails.application.routes.draw do
     confirmation: 'v'
   }
 
-  get 'interventions/index'
+  resources :interventions
+
   get 'my_quotes' => 'quotes#user_quotes', as: :my_quotes
   get 'my_leads' => 'leads#user_leads', as: :my_leads
 
