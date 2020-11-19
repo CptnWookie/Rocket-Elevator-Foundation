@@ -40,7 +40,7 @@ jQuery ->
             $('#intervention_battery_id').empty()
             $('#intervention_battery_id').parent().hide()
 
-    columns = $('#intervention_battery_id').html()        
+    columns = $('#intervention_column_id').html()        
     $('#intervention_battery_id').change ->
         battery = $('#intervention_battery_id :selected').text()
         options = $(columns).filter("optgroup[label='#{battery}']").html()
@@ -56,7 +56,7 @@ jQuery ->
             $('#intervention_column_id').empty()
             $('#intervention_column_id').parent().hide()
 
-    elevators = $('#intervention_column_id').html()        
+    elevators = $('#intervention_elevator_id').html()        
     $('#intervention_column_id').change ->
         column = $('#intervention_column_id :selected').text()
         options = $(elevators).filter("optgroup[label='#{column}']").html()

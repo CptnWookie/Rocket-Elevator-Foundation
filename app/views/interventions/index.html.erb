@@ -33,7 +33,7 @@
 
     <div class="col justify-content-center text-center">
       <%= f.label :Employee %>
-      <%= f.collection_select :employee_id, Employee.order(:first_name), :first_name, :last_name, include_blank: "None" %>
+      <%= f.collection_select :employee_id, Employee.order(:first_name), :id, :first_name, include_blank: "None" %>
     </div>
 
     <div class="col justify-content-center text-center">
