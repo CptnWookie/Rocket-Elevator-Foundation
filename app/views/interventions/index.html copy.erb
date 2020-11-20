@@ -1,126 +1,58 @@
-<section id="interventions">
-    <div class="container">
-        <div class="heading-title heading-dotted text-center" style="font-size: 30px;">
-            <h2>Interventions</h2>
-        </div>
-        <div class="row justify-content-center text-center">  
-            <form name="customers" id="customers">                                                                                   
-                <label class="col">Select Customer</label>
-                <select class="col justify-content-center text-center w-300" name="customerList" id="customerList" onchange="showHide()">
-                    <option value="select">Select</option>
-                    <option value="customertest">Customer Test</option>
-                </select>
-            </form> 
-        </div>  
-        <div class="row justify-content-center text-center">  
-            <div name="buildings" id="buildings">                                                                                   
-                <label class="col">Select Building</label>
-                <select class="col justify-content-center text-center w-300" name="buildingList" id="buildingList" onchange="showHide()">
-                    <option value="select">Select</option>
-                    <option value="buildingtest">Building Test</option>
-                </select>
-            </div> 
-        </div>  
-        <div class="row justify-content-center text-center">  
-            <form name="batteries" id="batteries">                                                                                   
-                <label class="col">Select Battery</label>
-                <select class="col justify-content-center text-center w-300" name="batteryList" id="batteryList" onchange="showHide()">
-                    <option value="select">Select</option>
-                    <option value="batterytest">Battery Test</option>
-                </select>
-            </form> 
-        </div>  
-        <div class="row justify-content-center text-center">  
-            <form name="columns" id="columns">                                                                                   
-                <label class="col">Select Column</label>
-                <select class="col justify-content-center text-center w-300" name="columnsList" id="columnsList" onchange="showHide()">
-                    <option value="none">None</option>
-                    <option value="columntest">Column Test</option>
-                </select>
-            </form> 
-        </div>  
-        <div class="row justify-content-center text-center">  
-            <form name="elevators" id="elevators">                                                                                   
-                <label class="col">Select Elevator</label>
-                <select class="col justify-content-center text-center w-300" name="elevatorList" id="elevatorList" onchange="showHide()">
-                    <option value="none">None</option>
-                    <option value="elevatortest">Elevator Test</option>
-                </select>
-            </form> 
-        </div>  
-        <div class="row justify-content-center text-center">  
-            <form name="employees" id="employees">                                                                                   
-                <label class="col">Select Employee</label>
-                <select class="col justify-content-center text-center w-300" name="employeesList" id="employeesList" onchange="showHide()">
-                    <option value="none">None</option>
-                    <option value="employeetest">Employee Test</option>
-                </select>
-            </form> 
-        </div>  
-</section>
-<script> 
+<div class="container">
+    <div class="heading-title heading-dotted text-center" style="font-size: 30px;">
+        <h2>Interventions</h2>
+    </div>
+</div>
 
-$(document).ready(function(){
-    $("#customer").show();
-    $("#building").hide();
-    $("#battery").hide();
-    $("#column").hide();
-    $("#elevator").hide();
-    $("#employee").show();
+<%= form_for Intervention.new do |f| %>
 
-    $('#customerSelect').on('change', function() {
-      if ( this.value == 'select')
-      {
-        $('#building').hide();
-        $('#battery').hide();
-        $('#column').hide();
-        $('#elevator').hide();
-      }
-      else
-      {
-        $('#buildingSelect').val('select');
-        $('#building').show();
-      }
-    });
+    <div class="col justify-content-center text-center">
+      <%= f.label :Customer %>
+      <%= f.collection_select :customer_id, Customer.order(:company_name), :id, :company_name, include_blank: "Select Customer" %>
+    </div>
+    
+    <div class="col justify-content-center text-center">
+      <%= f.label :Building %>
+      <%= f.grouped_collection_select :building_id, Customer.order(:company_name), :buildings, :company_name, :customer_id, :id, include_blank: false %>
+    </div>
 
-    $('#buildingSelect').on('change', function() {
-      if ( this.value == 'select')
-      {
-        $('#battery').hide();
-        $('#column').hide();
-        $('#elevator').hide();
-      }
-      else
-      {
-        $('#batterySelect').val('select');
-        $('#battery').show();
-      }
-    });
+    <div class="col justify-content-center text-center">
+      <%= f.label :Battery %>
+      <%= f.grouped_collection_select :battery_id, Building.order(:id), :batteries, :id, :building_id, :id, include_blank: false %>
+    </div>
 
-    $('#batterySelect').on('change', function() {
-      if ( this.value == 'select')
-      {
-        $('#column').hide();
-        $('#elevator').hide();
-      }
-      else
-      {
-        $('#columnSelect').val('select');
-        $('#column').show();
-      }
-    });
+    <div class="col justify-content-center text-center">
+      <%= f.label :Column %>
+      <%= f.grouped_collection_select :column_id, Battery.order(:id), :columns, :id, :battery_id, :id, include_blank: false %>
+    </div>
 
-    $('#columnSelect').on('change', function() {
-      if ( this.value == 'select')
-      {
-        $('#elevator').hide();
-      }
-      else
-      {
-        $('#elevatorSelect').val('select');
-        $('#elevator').show();
-      }
-    });    
+    <div class="col justify-content-center text-center">
+      <%= f.label :Elevator %>
+      <%= f.grouped_collection_select :elevator_id, Column.order(:id), :elevators, :id, :column_id, :id, include_blank: false %>
+    </div>
 
-});
-</script>
+    <div class="col justify-content-center text-center">
+      <%= f.label :Employee %>
+      <%= f.collection_select :employee_id, Employee.order(:first_name), :id, :first_name, include_blank: false %>
+    </div>
+
+    <!-- <div class="col justify-content-center text-center"> -->
+    <!--   <%= f.label :Result %> -->
+    <!--   <%= f.select :result, options_for_select(["Incomplete", "Failure", "Success"]), selected: "Incomplete" %> -->
+    <!-- </div> -->
+
+    <div class="col justify-content-center text-center">
+      <%= f.label :Description %>
+      <%= f.text_area :report %>
+    </div>
+
+    <!-- <div class="col justify-content-center text-center"> -->
+    <!--   <%= f.label :Result %> -->
+    <!--   <%= f.select :status, options_for_select(["Pending", "InProgress", "Interrupted", "Resumed", "Complete"]), include_blank: "Pending" %> -->
+    <!-- </div> -->
+        
+    <div class="form-actions text-center">
+      <%= f.submit %>
+    </div>
+
+<% end %>
