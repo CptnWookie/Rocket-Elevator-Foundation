@@ -1,35 +1,29 @@
 # Rocket Elevators API
 
-## Week-7, Team Project Description
+## Week-9, Project Description
 
-This app implements APIs in order to offer great user experience.
+During Week 9, as an important part of Rocket Elevators' information system was still missing and that was the management of interventions. To add it, it was necessary to take inspiration from the elements already implemented in the current solution and use them again to implement a new entity.
 
-- Twilio
-- Slack
-- DropBox
-- IBM Watson
-- ZenDesk
-- Google Maps
-- recaptcha
-- SendGrid
+The following element were added:
+- A new form to formulate the request
+- The creation of a new table
+- Saving the request for intervention in the database
+- Sending a service ticket to ZenDesk
+- The addition of an API request that returns new interventions requests
+
+
 
 **Here is the information you must enter in the sign in page to access the BackOffice :**
 
 - user : `admin@admin.com`
 - password : `admin123`
 
-## Members of the team
+### The REST API Repository : [Rocket_Elevators_REST_API](https://github.com/CptnWookie/Rocket_Elevators_REST_API)
+**[Postman collection](https://www.getpostman.com/collections/d5c693e95cd3789e0c5a)**
 
-- **[Alexandre Leblanc](https://github.com/CptnWookie)**
 
-- **[Frimina Zaddi](https://github.com/frimina)**
 
-- **[Rafaela_Schwarz](https://github.com/rafa-3111)**
-
-- **[Saad eddine](https://github.com/saadeddinne)**
-
-### The Repo : [Rocket_Elevators_API](https://github.com/CptnWookie/Rocket_Elevators_API)
-
+## Additional Components:
 ## API Google Maps
 
 - [Google Maps](https://github.com/apneadiving/Google-Maps-for-Rails)
