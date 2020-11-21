@@ -1,4 +1,4 @@
-# Rocket Elevators API
+# Rocket Elevators Foundation
 
 ## Week-9, Project Description
 
