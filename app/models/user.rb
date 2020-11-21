@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :quotes
   has_many :leads
+  has_many :interventions
   has_one :customer
   has_one :employee
 

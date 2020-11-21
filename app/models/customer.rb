@@ -1,6 +1,7 @@
 class Customer < ApplicationRecord
   has_many :buildings
   has_one :address, :dependent => :delete
+  has_many :interventions
   belongs_to :user
 
   # This will trigger the method extract_file when a customer is either created or updated
