@@ -1,8 +1,8 @@
 class Elevator < ApplicationRecord
   belongs_to :column
   has_many :interventions
-  # before_update :twilio_sms
-  # before_update :slack
+  before_update :twilio_sms
+  before_update :slack
 
 
 
