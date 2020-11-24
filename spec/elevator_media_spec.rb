@@ -1,3 +1,4 @@
+require 'rails_helper'
 require 'elevator_media'
 
 describe ElevatorMedia do

@@ -1,4 +1,4 @@
-Geocoder.configure(
+## Geocoder.configure(
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)
   # lookup: :nominatim,         # name of geocoding service (symbol)
@@ -19,8 +19,8 @@ Geocoder.configure(
   # Calculation options
   # units: :mi,                 # :km for kilometers or :mi for miles
   # distances: :linear          # :spherical or :linear
-  lookup:    :google,
-  api_key:   ENV['GOOGLE_API_SERVER_KEY'],
-  use_https: true,
+  ## lookup:    :google,
+  ## api_key:   ENV['GOOGLE_API_SERVER_KEY'],
+  ## use_https: true,
   # [...]
-)
+##)

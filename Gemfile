@@ -83,7 +83,7 @@ group :development do
   gem 'capistrano3-puma'
   gem 'underscore-rails', '~> 1.8', '>= 1.8.3'
   gem 'rails_admin_import', '~> 2.2'
-  
+    
   # Gems for APIs :
   gem 'figaro'
   gem 'twilio-ruby'
@@ -105,12 +105,12 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'rspec-rails', '~> 4.0.1'
 end
 
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rspec-rails', '~> 4.0.1'
 end
 
 
