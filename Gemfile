@@ -68,6 +68,7 @@ gem 'bootsnap', '>= 1.1.0'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+gem 'geocoder'
 
 group :development do
   gem 'better_errors', '~> 2.8', '>= 2.8.3'
@@ -90,7 +91,6 @@ group :development do
   gem 'ibm_watson'
   gem 'haml'
   gem 'gmaps4rails'
-  gem 'geocoder'
   gem 'slack-ruby-client'
   gem 'slack-notifier'
   gem 'dropbox-api'
