@@ -37,6 +37,5 @@ module ElevatorMedia
             # puts response.read_body
             return response
         end
-
     end
 end
