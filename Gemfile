@@ -104,6 +104,7 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 4.0', require: false
   gem 'chromedriver-helper'
   gem 'rspec-rails', '~> 4.0.1'
 end
