@@ -2,11 +2,29 @@ require 'rails_helper'
 require './app/models/address'
 
 describe Address do
-    describe '#full_address' do
-        context "Return City's Address" do
-            it 'returns string showing the current city in the address' do
-                expect(Address.full_address)
+
+    before do
+        @testAddress = Address.new
+        puts @testAddress
+    end
+
+    describe "Generate number_and_street value" do
+
+        context "custom_label_method method is called" do
+            it "content generated should be strings" do
+                numstreet = @testAddress.custom_label_method()
+                puts numstreet
+                expect(numstreet).to be_a(String)
             end
         end
-    end 
+
+        context "custom_label_method method is called" do
+            it "content generated should not be nil" do
+                numstreet = @testAddress.custom_label_method()
+                puts numstreet
+                expect(numstreet).to_not eq(nil)
+            end
+        end
+
+    end
 end
