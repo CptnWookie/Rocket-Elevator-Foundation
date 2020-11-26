@@ -8,23 +8,7 @@ describe ElevatorMedia::Streamer do
     end
 
     describe "Generate media content ready to be displayed" do
-
-        context "getContent method is called" do
-            it "valid HTML(include div tag) should be returned" do
-                html = @media.getContent()
-                puts html
-                expect(html).to include('div')
-            end
-        end
-
-        context "getContent method is called" do
-            it "content generated should be strings" do
-                html = @media.getContent()
-                puts html
-                expect(html).to be_a(String)
-            end
-        end
-
+        
         context "getContent method is called" do
             it "should not be nil" do
                 html = @media.getContent()
@@ -33,5 +17,22 @@ describe ElevatorMedia::Streamer do
             end
         end
         
+        
+        context "getContent method is called" do
+            it "content generated should be strings" do
+                html = @media.getContent()
+                puts html
+                expect(html).to be_a(String)
+            end
+        end
+        
+        context "getContent method is called" do
+            it "valid HTML(include div tag) should be returned" do
+                html = @media.getContent()
+                puts html
+                expect(html).to include('div')
+            end
+        end
+
     end
 end
