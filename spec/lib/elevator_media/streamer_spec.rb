@@ -5,12 +5,28 @@ describe ElevatorMedia::Streamer do
     before do
         @media = ElevatorMedia::Streamer.new
     end
-    describe "#getContent" do
-        context "Return Weather in Quebec City" do
-            it "getContent should return valid HTML(include div tag)" do
+    describe "Generate media content ready to be displayed" do
+        context "getContent method is called" do
+            it "valid HTML(include div tag) should be returned" do
                 html = @media.getContent()
                 puts html
                 expect(html).to include('div')
+            end
+        end
+
+        context "getContent method is called" do
+            it "content generated should be strings" do
+                html = @media.getContent()
+                puts html
+                expect(html).to be_a(String)
+            end
+        end
+
+        context "getContent method is called" do
+            it "should not be nil" do
+                html = @media.getContent()
+                puts html
+                expect(html).to_not eq(nil)
             end
         end
     end
