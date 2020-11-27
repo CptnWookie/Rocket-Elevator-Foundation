@@ -5,9 +5,9 @@
 During Week 10, as the marketing department at Rocket Elevators has long been waiting for the opportunity to do media content placement in the company's elevators. To meet their needs, a content delivery module needed to be implement in the information system.
 
 To ensure this new module is working properly, the developper needed to test it with the Test-Driven Development method (or TDD) and make sure the test were are successful.
-This module is available here : [Elevator Media Streamer](https://github.com/CptnWookie/Rocket-Elevator-Foundation/blob/master/lib/elevator_media/streamer.rb)
-The test for the Streamer can be found here: [Streamer Test](https://github.com/CptnWookie/Rocket-Elevator-Foundation/blob/master/spec/lib/elevator_media/streamer_spec.rb)
-The 3 new implementations of the unit test of the existing code can be found here : [Existing Code Test(3)](https://github.com/CptnWookie/Rocket-Elevator-Foundation/tree/master/spec/models)
+This module is available here : ### [Elevator Media Streamer](https://github.com/CptnWookie/Rocket-Elevator-Foundation/blob/master/lib/elevator_media/streamer.rb)
+The test for the Streamer can be found here: ### [Streamer Test](https://github.com/CptnWookie/Rocket-Elevator-Foundation/blob/master/spec/lib/elevator_media/streamer_spec.rb)
+The 3 new implementations of the unit test of the existing code can be found here : ### [Existing Code Test(3)](https://github.com/CptnWookie/Rocket-Elevator-Foundation/tree/master/spec/models)
 
 For the Rails Application, the RSPEC method was used for the implementation of the tests.
 For the JavaScript variant, the JEST method was used for the implementation of the tests.
