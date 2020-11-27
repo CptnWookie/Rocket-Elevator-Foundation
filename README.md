@@ -14,7 +14,7 @@ For the JavaScript variant, the JEST method was used for the implementation of t
 
 
 ***********************************************************************************************************************
-##Additional Informations:
+## Additional Informations:
 
 **Here is the information you must enter in the sign in page to access the BackOffice :**
 
