@@ -1,17 +1,20 @@
 # Rocket Elevators Foundation
 
-## Week-9, Project Description
+## Week-10, Quality
 
-During Week 9, as an important part of Rocket Elevators' information system was still missing and that was the management of interventions. To add it, it was necessary to take inspiration from the elements already implemented in the current solution and use them again to implement a new entity.
+During Week 10, as the marketing department at Rocket Elevators has long been waiting for the opportunity to do media content placement in the company's elevators. To meet their needs, a content delivery module needed to be implement in the information system.
 
-The following element were added:
-- A new form to formulate the request
-- The creation of a new table
-- Saving the request for intervention in the database
-- Sending a service ticket to ZenDesk
-- The addition of an API request that returns new interventions requests
+To ensure this new module is working properly, the developper needed to test it with the Test-Driven Development method (or TDD) and make sure the test were are successful.
+This module is available here : [Elevator Media Streamer](https://github.com/CptnWookie/Rocket-Elevator-Foundation/blob/master/lib/elevator_media/streamer.rb)
+The test for the Streamer can be found here: [Streamer Test](https://github.com/CptnWookie/Rocket-Elevator-Foundation/blob/master/spec/lib/elevator_media/streamer_spec.rb)
+The 3 new implementations of the unit test of the existing code can be found here : [Existing Code Test(3)](https://github.com/CptnWookie/Rocket-Elevator-Foundation/tree/master/spec/models)
+
+For the Rails Application, the RSPEC method was used for the implementation of the tests.
+For the JavaScript variant, the JEST method was used for the implementation of the tests.
 
 
+***********************************************************************************************************************
+##Additional Informations:
 
 **Here is the information you must enter in the sign in page to access the BackOffice :**
 
