@@ -120,3 +120,6 @@ group :production do
   # you probably don't want this for :test or :development
 end
 
+# Gems for Machine Learning
+gem 'azure-storage-blob'
+gem 'http'
