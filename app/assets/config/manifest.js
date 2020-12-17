@@ -25,4 +25,5 @@
 //= link jquery.themepunch.revolution.min
 //= link demo.revolution_slider.js
 //= link quote.js
+//= link microsoft.cognitiveservices.speech.sdk.bundle.js
 //= link rails_admin/custom/ui.js

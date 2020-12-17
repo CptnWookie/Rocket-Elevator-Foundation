@@ -32,5 +32,6 @@
 //= require Chart.bundle
 //= require underscore
 //= require gmaps/google
+//= require microsoft.cognitiveservices.speech.sdk.bundle.js
 //= require rails-ujs
 //= require_tree .

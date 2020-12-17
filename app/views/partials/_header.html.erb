@@ -43,6 +43,17 @@
             <li><!-- INTERVENTIONS -->
               <a href="/interventions/index">INTERVENTIONS</a>
             </li>
+            <li class="dropdown nav-animate-fadeIn resp-active"><!-- TOOLS -->
+              <a>TOOLS</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown">
+                  <a href="/recognition/index">SPEAKER RECOGNITION</a>
+                </li>
+                <li class="dropdown">
+                  <a href="/speech_to_text/index">SPEECH TO TEXT</a>
+                </li>
+              </ul>
+            </li>
             <% if can? :read, Quote %>
               <li><!-- BACKOFFICE -->
                 <%= link_to 'BACKOFFICE', rails_admin_path %>
