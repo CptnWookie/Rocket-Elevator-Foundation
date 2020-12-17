@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'recognition/index'
+  get 'speech_to_text/index'
   
   get 'geolocation/index'
   
@@ -35,6 +37,5 @@ Rails.application.routes.draw do
 
   match '/watson' => 'watson#speak', via: :get
 
-  get 'recognition/index'
 
 end

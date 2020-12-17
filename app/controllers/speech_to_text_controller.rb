@@ -1,0 +1,2 @@
+class SpeechToTextController < ApplicationController
+end
