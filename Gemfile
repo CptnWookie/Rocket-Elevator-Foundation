@@ -70,8 +70,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'geocoder'
 
-gem "safe_yaml"
-
 group :development do
   gem 'better_errors', '~> 2.8', '>= 2.8.3'
   gem 'binding_of_caller', '~> 0.8.0'
@@ -124,7 +122,3 @@ group :production do
   # or :staging or :beta or whatever environments you are using cloudflare in.
   # you probably don't want this for :test or :development
 end
-
-# Gems for Machine Learning
-gem 'azure-storage-blob'
-gem 'http'

@@ -35,4 +35,6 @@ Rails.application.routes.draw do
 
   match '/watson' => 'watson#speak', via: :get
 
+  get 'recognition/index'
+
 end
