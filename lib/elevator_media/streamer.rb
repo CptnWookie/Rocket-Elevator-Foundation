@@ -31,12 +31,12 @@ module ElevatorMedia
         
 
         def weather
-            url = URI("https://weatherbit-v1-mashape.p.rapidapi.com/current?lon=46.8428435&lat=-71.2818835&units=M&lang=en")
+            url = ENV["OPEN_WEATHER_URI"]
             
             http = Net::HTTP.new(url.host, url.port)
             http.use_ssl = true
             http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-            
+                        
             request = Net::HTTP::Get.new(url)
             request["x-rapidapi-key"] = ENV['OPEN_WEATHER_KEY']
             request["x-rapidapi-host"] = ENV['OPEN_WEATHER_HOST']

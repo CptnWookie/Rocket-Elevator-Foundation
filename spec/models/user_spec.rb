@@ -1,5 +1,5 @@
 require 'rails_helper'
-require './app/models/user'
+require 'app/models/user'
 
 describe Address, type: :model do
     let!(:first_name) {"Mathieu"}

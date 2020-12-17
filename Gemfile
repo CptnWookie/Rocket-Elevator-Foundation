@@ -98,6 +98,9 @@ group :development do
   gem 'sendgrid-ruby'
   gem "zendesk_api"
   gem "recaptcha", require: "recaptcha/rails"
+
+  # Brakeman XSS Test
+  gem 'brakeman'
 end
 
 
@@ -119,7 +122,3 @@ group :production do
   # or :staging or :beta or whatever environments you are using cloudflare in.
   # you probably don't want this for :test or :development
 end
-
-# Gems for Machine Learning
-gem 'azure-storage-blob'
-gem 'http'
