@@ -78,10 +78,13 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.5.1)
       msgpack (~> 1.0)
+    bootsnap (1.5.1-java)
+      msgpack (~> 1.0)
     bootstrap (4.5.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
+    brakeman (4.10.0)
     builder (3.2.4)
     byebug (11.1.3)
     cancancan (3.1.0)
@@ -397,6 +400,7 @@ GEM
     rvm1-capistrano3 (1.4.0)
       capistrano (~> 3.0)
       sshkit (>= 1.2)
+    safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -518,6 +522,7 @@ DEPENDENCIES
   binding_of_caller (~> 0.8.0)
   bootsnap (>= 1.1.0)
   bootstrap
+  brakeman
   byebug
   cancancan (~> 3.1)
   capistrano (~> 3.10)
@@ -556,6 +561,7 @@ DEPENDENCIES
   recaptcha
   rspec-rails (~> 4.0.1)
   rvm1-capistrano3
+  safe_yaml
   sass-rails (~> 5.0)
   selenium-webdriver
   sendgrid-ruby

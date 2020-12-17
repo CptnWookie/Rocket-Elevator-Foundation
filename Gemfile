@@ -70,6 +70,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'geocoder'
 
+gem "safe_yaml"
+
 group :development do
   gem 'better_errors', '~> 2.8', '>= 2.8.3'
   gem 'binding_of_caller', '~> 0.8.0'
@@ -98,6 +100,9 @@ group :development do
   gem 'sendgrid-ruby'
   gem "zendesk_api"
   gem "recaptcha", require: "recaptcha/rails"
+
+  # Brakeman XSS Test
+  gem 'brakeman'
 end
 
 
