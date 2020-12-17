@@ -67,6 +67,13 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (10.0.2.0)
       execjs
+    azure-storage-blob (2.0.0)
+      azure-storage-common (~> 2.0)
+      nokogiri (~> 1.10.4)
+    azure-storage-common (2.0.1)
+      faraday (~> 1.0)
+      faraday_middleware (~> 1.0.0.rc1)
+      nokogiri (~> 1.10.4)
     bcrypt (3.1.16)
     bcrypt (3.1.16-java)
     better_errors (2.9.1)
@@ -518,6 +525,7 @@ DEPENDENCIES
   activerecord-suppress_range_error (~> 0.1.1)
   addressy (~> 0.0.2)
   audited!
+  azure-storage-blob
   better_errors (~> 2.8, >= 2.8.3)
   binding_of_caller (~> 0.8.0)
   bootsnap (>= 1.1.0)
@@ -546,6 +554,7 @@ DEPENDENCIES
   gmaps4rails
   groupdate (~> 5.2, >= 5.2.1)
   haml
+  http
   ibm_watson
   jbuilder (~> 2.5)
   jquery-rails
