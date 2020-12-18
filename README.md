@@ -5,7 +5,7 @@
 At Rocket Elevators Machine Learning is a tool that will give products a competitive edge if the necessary functionality is implemented correctly. Rocket Elevators are highly secure places because what happens during operations can be embarrassing for customers. It is therefore worthwhile to offer those who operate our products safety features that ensure the safety of the users. In addition to the traditional cameras.\
 The audios will be processed to serve two purposes:
 
-- To recognize passengers via voice profiles.\
+- To recognize passengers via voice profiles.
 - Transcribe audio for legal purposes.
 
 To do so, we applied Azure's Cognitive Services on Microsoft Azure platform.
