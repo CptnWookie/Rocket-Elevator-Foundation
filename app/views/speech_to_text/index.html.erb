@@ -8,12 +8,17 @@
         <td><h1 style="font-weight:500;">Rocket Elevators Speech to Text</h1></td>
       </tr>
       <tr>
-        <td align="right"><a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started" target="_blank">Subscription</a>:</td>
-        <td><input id="subscriptionKey" type="text" size="40" value="subscription"></td>
+        <td><input id="subscriptionKey" type="hidden" size="40" value="64c9007205cf4312afcd776c0ade31cc"></td>
       </tr>
       <tr>
-        <td align="right">Region</td>
-        <td><input id="serviceRegion" type="text" size="40" value="westus"></td>
+        <td><input id="serviceRegion" type="hidden" size="40" value="westus"></td>
+      </tr>
+      <tr>
+        <td align="right">Source Language</td>
+        <td><select id="languageSourceOptions">
+          <option value="en-CA">English - CA</option>
+          <option value="fr-CA">French - CA</option>
+        </select></td>
       </tr>
       <tr>
         <td align="right">File to Recognize</td>
@@ -97,7 +102,7 @@
           speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey.value, serviceRegion.value);
         }
 
-        speechConfig.speechRecognitionLanguage = "en-US";
+        speechConfig.speechRecognitionLanguage = languageSourceOptions.value;
         var audioConfig  = SpeechSDK.AudioConfig.fromWavFileInput(audioFile);
         recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
 
@@ -136,15 +141,3 @@
   </script>
 </body>
 </html>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
