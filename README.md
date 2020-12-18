@@ -25,6 +25,9 @@ To do so, we applied Azure's Cognitive Services on Microsoft Azure platform.
 Postman "SpeechToText" collection:\
 https://www.getpostman.com/collections/39f17f22030489118249
 
+## Report showing the results obtained for each identification test:
+https://drive.google.com/file/d/1H30FoYulTdOLIpMr-tXuH68r83OWIFfi/view?usp=sharing
+
 ## Les 3 profile ID's
 Kem :\
 d967f9cc-2fee-4b1d-95a4-1d905fc31714\
