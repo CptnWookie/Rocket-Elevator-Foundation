@@ -1,5 +1,32 @@
 # Rocket Elevators Foundation
 
+## Week-13, Machine Learning - Artificial Intelligence
+
+At Rocket Elevators Machine Learning is a tool that will give products a competitive edge if the necessary functionality is implemented correctly. Rocket Elevators are highly secure places because what happens during operations can be embarrassing for customers. It is therefore worthwhile to offer those who operate our products safety features that ensure the safety of the users. In addition to the traditional cameras.\
+The audios will be processed to serve two purposes:
+
+- To recognize passengers via voice profiles.\
+- Transcribe audio for legal purposes.
+
+To do so, we applied Azure's Cognitive Services on Microsoft Azure platform.
+
+
+### All the paths to the audio files that were used to creating speaker profiles and conversation analysis:
+
+* PATH TO THE AUDIOS & TEXT FILES app/assets/audio
+
+* PATH TO THE SPEAKERS CONTROLLER app/controllers/speech_to_text_controller.rb
+
+* PATH TO THE SPEAKERS VIEW app/views/speech_to_text/index.html.erb 
+
+* PATH TO THE SPEAKERS HELPER app/helpers/speech_to_text_helper.rb
+
+## POSTMAN tests\
+Postman "SpeechToText" collection:
+
+
+
+***********************************************************************************************************************
 ## Week-10, Quality
 
 During Week 10, as the marketing department at Rocket Elevators has long been waiting for the opportunity to do media content placement in the company's elevators. To meet their needs, a content delivery module needed to be implement in the information system.
