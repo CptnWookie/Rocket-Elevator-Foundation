@@ -21,16 +21,16 @@ To do so, we applied Azure's Cognitive Services on Microsoft Azure platform.
 
 * PATH TO THE SPEAKERS HELPER app/helpers/speech_to_text_helper.rb
 
-## POSTMAN tests\
+## POSTMAN tests
 Postman "SpeechToText" collection:
 
 ## Les 3 profile ID's
-Kem :
-d967f9cc-2fee-4b1d-95a4-1d905fc31714
-Emma:
-3cadee39-1200-4737-a705-0e0cec50c7ca
-Andre:
-2f6bd789-ea45-4c8c-a17d-01fa61d3be8c
+Kem :\
+d967f9cc-2fee-4b1d-95a4-1d905fc31714\
+Emma:\
+3cadee39-1200-4737-a705-0e0cec50c7ca\
+Andre:\
+2f6bd789-ea45-4c8c-a17d-01fa61d3be8c\
 
 
 
