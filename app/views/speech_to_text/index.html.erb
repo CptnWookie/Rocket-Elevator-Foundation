@@ -6,20 +6,27 @@
         <td></td>
         <td><h1 style="font-weight:500;">Rocket Elevators Speech to Text</h1></td>
       </tr>
+
       <tr>
+        <!-- This is where the subscription id from Azure Cognitive Service is put. This field is hidden -->
         <td><input id="subscriptionKey" type="hidden" size="40" value="64c9007205cf4312afcd776c0ade31cc"></td>
       </tr>
+
       <tr>
+        <!-- This is where the region is setup. Needs to be set to westus as the service is only available on that region. This field is hidden -->
         <td><input id="serviceRegion" type="hidden" size="40" value="westus"></td>
       </tr>
       <tr>
+        <!-- This is where the user will select the appropriate language based on the file language -->
         <td align="right">Source Language</td>
         <td><select id="languageSourceOptions">
           <option value="en-CA">English - CA</option>
           <option value="fr-CA">French - CA</option>
         </select></td>
       </tr>
+
       <tr>
+        <!-- This is where the user select the file that will be converted to text. WAV files only -->
         <td align="right">File to Recognize</td>
         <td>
           <input type="file" id="filePicker" accept=".wav" />
@@ -27,21 +34,27 @@
       </tr>
       <tr>
         <td></td>
+
+        <!-- This is the button that initiates the transcription -->
         <td><button id="startRecognizeOnceAsyncButton">Start recognition</button></td>
       </tr>
+      
       <tr>
+        <!-- This is where the result of the transcription will be displayed -->
         <td align="right" valign="top">Results</td>
         <td><textarea id="phraseDiv" style="display: inline-block;width:500px;height:200px"></textarea></td>
       </tr>
     </table>
   </div>
+
+
+  <!-- This is where all the script from Azure are stored -->
+
   <!-- Speech SDK reference sdk. -->
   <script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
 
   <!-- Speech SDK Authorization token -->
   <script>
-  // Note: Replace the URL with a valid endpoint to retrieve
-  //       authorization tokens for your subscription.
   var authorizationEndpoint = "token.php";
 
   function RequestAuthorizationToken() {

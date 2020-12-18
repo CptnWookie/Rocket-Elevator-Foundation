@@ -5,45 +5,65 @@
         <td></td>
         <td><h1 style="font-weight:500;">Rocket Elevators Speaker Recognition</h1></td>
       </tr>
+
       <tr>
-        <td align="right"><a href="https://docs.microsoft.com/azure/cognitive-services/speech-service/get-started" target="_blank">Subscription</a>:</td>
-        <td><input id="subscriptionKey" type="text" size="40" value=""></td>
+        <!-- This is where the subscription id from Azure Cognitive Service is put. This field is hidden -->
+        <td><input id="subscriptionKey" type="hidden" size="40" value="64c9007205cf4312afcd776c0ade31cc"></td>
       </tr>
+
       <tr>
-        <td align="right">Region</td>
-        <td><input id="serviceRegion" type="text" size="40" value="westus"></td>
+        <!-- This is where the region is setup. Needs to be set to westus as the service is only available on that region. This field is hidden -->
+        <td><input id="serviceRegion" type="hidden" size="40" value="westus"></td>
       </tr>
+
       <tr>
+        <!-- This is where the user will select the file that will be used to create a profile. WAV files only -->
         <td align="right">Enrollment File</td>
         <td>
           <input type="file" id="filePicker" accept=".wav" />
         </td>
       </tr>
+
       <tr>
+      <!-- This is where the user will select the file that will be used to test the previously created profile. WAV files only -->
         <td align="right">Test Identification File</td>
         <td>
           <input type="file" id="testFilePicker" accept=".wav" />
         </td>
       </tr>
+
       <tr>
         <td></td>
+        <!-- This is the button that triggers the profile creation -->
         <td><button id="createVoiceProfileButton">Create Voice Profile</button></td>
       </tr>
+
       <tr>
         <td></td>
+        <!-- This is the button that triggers the profile testing -->
         <td><button id="identifySpeakerButton">Identify Speaker</button></td>
       </tr>
+
       <tr>
         <td></td>
+        <!-- This is the button that deletes the created profile -->
         <td><button id="deleteProfileButton">Delete Voice Profile</button></td>
       </tr>
+
       <tr>
+        <!-- This is where the result are displayed when a profile is created, tested or deleted. -->
         <td align="right" valign="top">Result</td>
         <td><textarea id="resultDiv" style="display: inline-block;width:500px;height:200px"></textarea></td>
       </tr>
     </table>
   </div>
 
+
+
+
+
+  <!-- This is where all the script from Azure are stored -->
+  
   <!-- Speech SDK reference sdk. -->
   <script src="microsoft.cognitiveservices.speech.sdk.bundle.js" ></script>
 
