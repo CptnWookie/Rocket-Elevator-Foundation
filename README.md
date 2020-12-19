@@ -10,16 +10,16 @@ The audios will be processed to serve two purposes:
 
 To do so, we applied Azure's Cognitive Services on Microsoft Azure platform.
 
+### A new section in the Information System has been added to give access to the new features : Tools
+
 
 ### All the paths to the audio files that were used to creating speaker profiles and conversation analysis:
 
 * PATH TO THE AUDIOS & TEXT FILES app/assets/audio
 
-* PATH TO THE SPEAKERS CONTROLLER app/controllers/speech_to_text_controller.rb
+* PATH TO THE SPEAKERS RECOGNITION VIEW app/views/recognition/index.html.erb
 
-* PATH TO THE SPEAKERS VIEW app/views/speech_to_text/index.html.erb 
-
-* PATH TO THE SPEAKERS HELPER app/helpers/speech_to_text_helper.rb
+* PATH TO THE SPEAKERS RECOGNITION VIEW app/views/speech_to_text/index.html.erb 
 
 ## POSTMAN tests
 Postman "CollectionWeek13" collection:\
@@ -28,7 +28,7 @@ https://www.getpostman.com/collections/39f17f22030489118249
 ## Report showing the results obtained for each identification test:
 https://drive.google.com/file/d/1H30FoYulTdOLIpMr-tXuH68r83OWIFfi/view?usp=sharing
 
-## Les 3 profile ID's
+## 3 SPEAKER PROFILES ID's
 Kem :\
 d967f9cc-2fee-4b1d-95a4-1d905fc31714\
 Emma:\
@@ -37,10 +37,7 @@ Andre:\
 2f6bd789-ea45-4c8c-a17d-01fa61d3be8c
 
 
-# See details at the video:
-VIDEO HERE
-
-***********************************************************************************************************************
+# See details at the video: https://youtu.be/Y6h26qx3Jtk
 
 ***********************************************************************************************************************
 ## Week-10, Quality
