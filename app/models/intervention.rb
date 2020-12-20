@@ -39,21 +39,21 @@ class Intervention < ApplicationRecord
     
     # Set the values of "client" related to the configuration of Zendesk API
     # The URL, Username and Token are secured in Environment Variables                        
-    client = ZendeskAPI::Client.new do |config|
-        config.url = ENV["ZENDESK_URL"]
-        config.username = ENV["ZENDESK_USER"]
-        config.token = ENV["ZENDESK_AUTH"]
-    end
+    # client = ZendeskAPI::Client.new do |config|
+    #     config.url = ENV["ZENDESK_URL"]
+    #     config.username = ENV["ZENDESK_USER"]
+    #     config.token = ENV["ZENDESK_AUTH"]
+    # end
     
     # Creates a ticket with a subject predetermined and the body value to "comment", which was descripbed previously.
-    ZendeskAPI::Ticket.create!(client,
-    :subject => "Intervention Request", 
-    :comment => comment,
+    # ZendeskAPI::Ticket.create!(client,
+    # :subject => "Intervention Request", 
+    # :comment => comment,
     
-    # This is the priority for viewing tickets, if urgent, tickets will appear at the top of the list
-    :priority => "normal",
-    :type => "problem"
-    )
+    # # This is the priority for viewing tickets, if urgent, tickets will appear at the top of the list
+    # :priority => "normal",
+    # :type => "problem"
+    # )
   end
 end
 

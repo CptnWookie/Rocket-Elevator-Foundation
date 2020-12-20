@@ -16,30 +16,30 @@ class Lead < ApplicationRecord
 
     # ZENDESK SECTION FOR THE CONTACT FORM  
 
-    def new_lead_ticket
-        client = ZendeskAPI::Client.new do |config|
-          config.url = ENV["ZENDESK_URL"]
-          config.username = ENV["ZENDESK_USER"]
-          config.token = ENV["ZENDESK_AUTH"]
-        end
+    # def new_lead_ticket
+    #     client = ZendeskAPI::Client.new do |config|
+    #       config.url = ENV["ZENDESK_URL"]
+    #       config.username = ENV["ZENDESK_USER"]
+    #       config.token = ENV["ZENDESK_AUTH"]
+    #     end
   
-        # This part is the configuration of zendesk api 
+    #     # This part is the configuration of zendesk api 
 
-        ZendeskAPI::Ticket.create!(client,
-        :subject => "#{self.full_name} from #{self.business_name}",
-        :comment => {
-          :value => "The contact #{self.full_name} from #{self.business_name} can be reached at email #{self.email} and at phone number #{self.phone}. \n #{self.department} has a project name #{self.project_name} which will require contribution from Rocket Elevators. \n Project Desciption : \n #{self.project_description} \n Attached message : \n #{self.message} \n The Contact uploaded an attachment #{self.attachment}" 
-        },
-        :requester => {
-          "name": self.full_name,
-          "email": self.email
-        },
+    #     ZendeskAPI::Ticket.create!(client,
+    #     :subject => "#{self.full_name} from #{self.business_name}",
+    #     :comment => {
+    #       :value => "The contact #{self.full_name} from #{self.business_name} can be reached at email #{self.email} and at phone number #{self.phone}. \n #{self.department} has a project name #{self.project_name} which will require contribution from Rocket Elevators. \n Project Desciption : \n #{self.project_description} \n Attached message : \n #{self.message} \n The Contact uploaded an attachment #{self.attachment}" 
+    #     },
+    #     :requester => {
+    #       "name": self.full_name,
+    #       "email": self.email
+    #     },
 
 
-        # This is the priority for viewing tickets, if urgent, tickets will appear at the top of the list
-        :priority => "normal",
-        :type => "Question"
-        )
-    end
+    #     # This is the priority for viewing tickets, if urgent, tickets will appear at the top of the list
+    #     :priority => "normal",
+    #     :type => "Question"
+    #     )
+    # end
 end
 

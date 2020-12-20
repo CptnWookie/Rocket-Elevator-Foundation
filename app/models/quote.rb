@@ -29,24 +29,24 @@ class Quote < ApplicationRecord
     # This part is the configuration of zendesk api 
    
 
-    client = ZendeskAPI::Client.new do |config|
-      config.url = 'https://rocketelevator1.zendesk.com/api/v2'
-      config.username = 'friminazaddi@gmail.com'
-      config.token = ENV["zendesk_api"]
-    end
+    # client = ZendeskAPI::Client.new do |config|
+    #   config.url = 'https://rocketelevator1.zendesk.com/api/v2'
+    #   config.username = 'friminazaddi@gmail.com'
+    #   config.token = ENV["zendesk_api"]
+    # end
 
     # This part create a ticket with a subject and the body, the body come from the comment at the top of the page depending on the type of building
 
 
-    ZendeskAPI::Ticket.create!(client,
-    :subject => "Quote Request", 
-    :comment => comment,
+    # ZendeskAPI::Ticket.create!(client,
+    # :subject => "Quote Request", 
+    # :comment => comment,
     
-    # This is the priority for viewing tickets, if urgent, tickets will appear at the top of the list
+    # # This is the priority for viewing tickets, if urgent, tickets will appear at the top of the list
 
-    :priority => "normal",
-    :type => "Question"
-    )
+    # :priority => "normal",
+    # :type => "Question"
+    # )
   end
 
 
