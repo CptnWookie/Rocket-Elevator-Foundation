@@ -37,7 +37,7 @@ Andre:\
 2f6bd789-ea45-4c8c-a17d-01fa61d3be8c
 
 
-# See details at the video: https://www.youtube.com/watch?v=GkHhVvrOfY0&feature=youtu.be
+# See details at the video: https://youtu.be/Y6h26qx3Jtk
 
 ***********************************************************************************************************************
 ## Week-10, Quality
