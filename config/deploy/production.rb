@@ -25,9 +25,9 @@ set :linked_files, %w{config/database.yml config/dwh_db.yml config/application.y
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{ubuntu@15.222.254.141}
-role :web, %w{ubuntu@15.222.254.141}
-role :db,  %w{ubuntu@15.222.254.141}
+role :app, %w{bitnami@15.222.254.141}
+role :web, %w{bitnami@15.222.254.141}
+role :db,  %w{bitnami@15.222.254.141}
 
 
 
