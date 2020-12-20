@@ -30,8 +30,6 @@ gem "audited", github: "collectiveidea/audited"
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'actionpack-cloudflare'
 
-gem 'sassc', '~> 2.4.0'
-
 gem 'newrelic_rpm'
 gem 'newrelic-infinite_tracing'
 

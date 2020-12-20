@@ -151,10 +151,10 @@ GEM
     diff-lcs (1.4.4)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dropbox-api (0.4.2)
-      hashie
-      multi_json
-      oauth
+    dropbox-api (0.4.8)
+      hashie (~> 3.4.0)
+      multi_json (~> 1.10)
+      oauth (~> 0.4.7)
     dropbox_api (0.1.18)
       faraday (<= 1.0)
       oauth2 (~> 1.1)
@@ -178,18 +178,18 @@ GEM
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     gmaps4rails (2.1.2)
-    google-protobuf (3.14.0)
+    google-protobuf (3.14.0-x86_64-linux)
     googleapis-common-protos-types (1.0.5)
       google-protobuf (~> 3.11)
     groupdate (5.2.1)
       activesupport (>= 5)
-    grpc (1.28.0)
+    grpc (1.28.0-x86_64-linux)
       google-protobuf (~> 3.11)
       googleapis-common-protos-types (~> 1.0)
     haml (5.2.1)
       temple (>= 0.8.0)
       tilt
-    hashie (4.1.0)
+    hashie (3.4.6)
     http (4.1.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -255,9 +255,7 @@ GEM
     marcel (0.3.3)
       mimemagic (~> 0.3.2)
     method_source (1.0.0)
-    mime-types (3.3.1)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2020.1104)
+    mime-types (1.25.1)
     mimemagic (0.3.5)
     mini_magick (4.11.0)
     mini_mime (1.0.2)
@@ -279,7 +277,7 @@ GEM
     nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    oauth (0.5.4)
+    oauth (0.4.7)
     oauth2 (1.4.4)
       faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
@@ -467,15 +465,17 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zendesk_api (1.28.0)
-      faraday (>= 0.9.0, < 2.0.0)
-      hashie (>= 3.5.2, < 5.0.0)
+    zendesk_api (1.2.4)
+      faraday (>= 0.8.0)
+      faraday_middleware (>= 0.8.7)
+      hashie (>= 1.2)
       inflection
-      mime-types
-      multipart-post (~> 2.0)
+      mime-types (~> 1.0)
+      multi_json
+      multipart-post
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   actionpack-cloudflare
@@ -528,7 +528,6 @@ DEPENDENCIES
   rspec-rails (~> 4.0.1)
   rvm1-capistrano3
   sass-rails (~> 5.0)
-  sassc (~> 2.4.0)
   selenium-webdriver
   sendgrid-ruby
   simple_form
@@ -551,4 +550,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   2.1.4
+   2.2.2
