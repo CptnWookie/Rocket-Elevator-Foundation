@@ -8,7 +8,7 @@ class Intervention < ApplicationRecord
   belongs_to :employee, optional: true
 
   # After creating a new ticket from the Def Create in the Controller, trigger Def new_intervention_ticket
-  after_create :new_intervention_ticket
+  #after_create :new_intervention_ticket
   
   
   def new_intervention_ticket
