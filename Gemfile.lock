@@ -528,7 +528,7 @@ DEPENDENCIES
   rspec-rails (~> 4.0.1)
   rvm1-capistrano3
   sass-rails (~> 5.0)
-  sassc
+  sassc (~> 2.4.0)
   selenium-webdriver
   sendgrid-ruby
   simple_form
