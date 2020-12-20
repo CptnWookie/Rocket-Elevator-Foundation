@@ -30,14 +30,6 @@ gem "audited", github: "collectiveidea/audited"
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'actionpack-cloudflare'
 
-gem 'nokogiri'
-# gem 'rack', '~> 2.0.1'
-gem 'rack'
-gem 'rspec'
-
-gem 'bundler', '~> 2.2.0'
-gem 'rake', '~> 13.0.2'
-
 # USER RELATED
 gem 'devise'
 gem 'simple_form'
@@ -77,7 +69,6 @@ gem 'bootsnap', '>= 1.1.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'geocoder'
-
 
 group :development do
   gem 'better_errors', '~> 2.8', '>= 2.8.3'
