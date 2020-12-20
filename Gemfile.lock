@@ -519,7 +519,7 @@ DEPENDENCIES
   rails_admin_import (~> 2.2)
   rails_admin_material
   rails_admin_rollincode (~> 1.0)
-  rake
+  rake (~> 13.0.2)
   recaptcha
   rspec
   rspec-rails (~> 4.0.1)

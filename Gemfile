@@ -36,6 +36,7 @@ gem 'rack'
 gem 'rspec'
 
 gem 'bundler', '~> 2.2.0'
+gem 'rake', '~> 13.0.2'
 
 # USER RELATED
 gem 'devise'
@@ -77,7 +78,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'geocoder'
 
-gem 'rake'
 
 group :development do
   gem 'better_errors', '~> 2.8', '>= 2.8.3'
