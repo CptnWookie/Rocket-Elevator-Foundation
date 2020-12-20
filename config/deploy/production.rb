@@ -4,7 +4,7 @@
 # You can define all roles on a single server, or split them:
 
 # server "99.79.123.96", user: "ubuntu", roles: %w{app db web}
-server "18.191.28.137", user: "ubuntu", roles: %w{app db web}
+server "18.222.15.251", user: "ubuntu", roles: %w{app db web}
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 app = ENV['APP']
@@ -29,9 +29,9 @@ set :linked_files, %w{config/database.yml config/dwh_db.yml config/application.y
 # role :app, %w{ubuntu@99.79.123.96}
 # role :web, %w{ubuntu@99.79.123.96}
 # role :db,  %w{ubuntu@99.79.123.96}
-role :app, %w{ubuntu@18.191.28.137}
-role :web, %w{ubuntu@18.191.28.137}
-role :db,  %w{ubuntu@18.191.28.137}
+role :app, %w{ubuntu@18.222.15.251}
+role :web, %w{ubuntu@18.222.15.251}
+role :db,  %w{ubuntu@18.222.15.251}
 
 
 
