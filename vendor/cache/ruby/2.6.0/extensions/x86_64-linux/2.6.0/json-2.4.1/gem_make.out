@@ -1,0 +1,13 @@
+current directory: /home/alexandre/Codeboxx/Odyssey/Rocket-Elevator-Foundation/vendor/cache/ruby/2.6.0/gems/json-2.4.1/ext/json
+/home/alexandre/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/alexandre/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20201219-17922-8f4l3y.rb extconf.rb
+creating Makefile
+
+current directory: /home/alexandre/Codeboxx/Odyssey/Rocket-Elevator-Foundation/vendor/cache/ruby/2.6.0/gems/json-2.4.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/alexandre/Codeboxx/Odyssey/Rocket-Elevator-Foundation/vendor/cache/ruby/2.6.0/gems/json-2.4.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/alexandre/Codeboxx/Odyssey/Rocket-Elevator-Foundation/vendor/cache/ruby/2.6.0/gems/json-2.4.1/ext/json
+make "DESTDIR=" install

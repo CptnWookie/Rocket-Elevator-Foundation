@@ -1,0 +1,194 @@
+"pkg-config --exists icu-i18n"
+| pkg-config --libs icu-i18n
+=> "-licui18n -licuuc -licudata\n"
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.    -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby  -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.    -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby -licui18n -licuuc -licudata -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I icu-i18n
+=> "\n"
+| pkg-config --cflags-only-other icu-i18n
+=> "\n"
+| pkg-config --libs-only-l icu-i18n
+=> "-licui18n -licuuc -licudata\n"
+package configuration for icu-i18n
+cflags: 
+ldflags: 
+libs: -licui18n -licuuc -licudata
+
+"pkg-config --exists icu-io"
+| pkg-config --libs icu-io
+=> "-licuio -licui18n -licuuc -licudata\n"
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.     -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC  conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic      -licui18n -licuuc -licudata -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby -licuio -licui18n -licuuc -licudata -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I icu-io
+=> "\n"
+| pkg-config --cflags-only-other icu-io
+=> "\n"
+| pkg-config --libs-only-l icu-io
+=> "-licuio -licui18n -licuuc -licudata\n"
+package configuration for icu-io
+cflags: 
+ldflags: 
+libs: -licuio -licui18n -licuuc -licudata
+
+"pkg-config --exists icu-uc"
+| pkg-config --libs icu-uc
+=> "-licuuc -licudata\n"
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.      -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC   conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic       -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby -licuuc -licudata -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+| pkg-config --cflags-only-I icu-uc
+=> "\n"
+| pkg-config --cflags-only-other icu-uc
+=> "\n"
+| pkg-config --libs-only-l icu-uc
+=> "-licuuc -licudata\n"
+package configuration for icu-uc
+cflags: 
+ldflags: 
+libs: -licuuc -licudata
+
+have_library: checking for -licui18n... -------------------- yes
+
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.       -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC    conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic        -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby -licui18n  -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for unicode/ucnv.h... -------------------- yes
+
+"gcc -E -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.       -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <unicode/ucnv.h>
+/* end */
+
+--------------------
+
+have_library: checking for -lz... -------------------- yes
+
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.       -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC    conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic       -licui18n  -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby -lz -licui18n  -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for -licuuc... -------------------- yes
+
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.       -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC    conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic       -lz -licui18n  -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby -licuuc -lz -licui18n  -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for -licudata... -------------------- yes
+
+"gcc -o conftest -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/x86_64-linux -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0/ruby/backward -I/home/alexandre/.rvm/rubies/ruby-2.6.5/include/ruby-2.6.0 -I.       -O3 -ggdb3 -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable  -fPIC    conftest.c  -L. -L/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -Wl,-rpath,/home/alexandre/.rvm/rubies/ruby-2.6.5/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic       -licuuc -lz -licui18n  -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -Wl,-rpath,'/../lib' -Wl,-rpath,'/../lib' -lruby -licudata -licuuc -lz -licui18n  -licui18n -licuuc -licudata -licuio -licui18n -licuuc -licudata -licuuc -licudata -lm   -lc"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
