@@ -512,6 +512,7 @@ DEPENDENCIES
   rails_admin_import (~> 2.2)
   rails_admin_material
   rails_admin_rollincode (~> 1.0)
+  rake
   recaptcha
   rspec-rails (~> 4.0.1)
   rvm1-capistrano3
