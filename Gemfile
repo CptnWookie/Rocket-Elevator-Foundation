@@ -30,6 +30,13 @@ gem "audited", github: "collectiveidea/audited"
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'actionpack-cloudflare'
 
+gem 'nokogiri'
+# gem 'rack', '~> 2.0.1'
+gem 'rack'
+gem 'rspec'
+
+gem 'bundler', '~> 2.2.0'
+
 # USER RELATED
 gem 'devise'
 gem 'simple_form'
