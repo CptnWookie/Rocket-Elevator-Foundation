@@ -1,5 +1,0 @@
-app_key:    # CONSUMER KEY
-app_secret: # CONSUMER SECRET
-token:      # ACCESS TOKEN
-secret:     # ACCESS SECRET
-mode:       # 'sandbox' or 'dropbox'
