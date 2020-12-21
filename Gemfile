@@ -122,6 +122,8 @@ end
 
 
 group :production do
+  gem 'newrelic_rpm'
+  gem 'newrelic-infinite_tracing'
   # or :staging or :beta or whatever environments you are using cloudflare in.
   # you probably don't want this for :test or :development
 end
