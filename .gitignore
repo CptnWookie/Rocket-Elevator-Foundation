@@ -42,7 +42,7 @@ public/uploads/lead/attachment
 # Ignore application configuration
 /config/application.yml
 
-# Ignore application configuration
+# Ignore newrelic configuration
 /config/newrelic.yml
 
 sendgrid.env
