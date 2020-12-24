@@ -1,5 +1,18 @@
 # Rocket Elevators Foundation
 
+
+## Week-14, DevOps
+
+In order to complete his solution for his Information System, Rocket Elevators, asked his Dev Team to implement tools to gather informations about the traffic on his website.
+To do so, the developper will have to use 2 tools :
+
+- NewRelic APM : Requires to install the Gem and link it to the account which will generate a Complete Dashboard with all the information about the internal component of the Information System.
+
+- Google Analytics : Requires to add a Tag into the Header of the application so it can keep track of online traffic.
+
+
+***********************************************************************************************************************
+
 ## Week-13, Machine Learning - Artificial Intelligence
 
 At Rocket Elevators Machine Learning is a tool that will give products a competitive edge if the necessary functionality is implemented correctly. Rocket Elevators are highly secure places because what happens during operations can be embarrassing for customers. It is therefore worthwhile to offer those who operate our products safety features that ensure the safety of the users. In addition to the traditional cameras.\
